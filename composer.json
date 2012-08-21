@@ -1,0 +1,47 @@
+{
+    "name": "emagister/zend-twitter-bootstrap",
+    "description": "A set of utility view helpers to use along with Zend Framework (v1)",
+    "require-dev": {
+        "mockery/mockery": "0.7.2"
+    },
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Christian Soronellas",
+            "email": "csoronellas@emagister.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "zendframework/zendframework1",
+                "version": "1.12.0rc3",
+                "dist": {
+                    "url": "http://framework.zend.com/releases/ZendFramework-1.12.0rc3/ZendFramework-1.12.0rc3.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "http://framework.zend.com/svn/framework/standard/",
+                    "type": "svn",
+                    "reference": "tags/release-1.12.0rc3"
+                },
+                "autoload": {
+                    "psr-0": {
+                        "Zend_": "library/",
+                        "ZendX_": "extras/library/"
+                    }
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.2.4",
+        "zendframework/zendframework1": "1.12.0rc3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Twitter_": "src/"
+        }
+    }
+}

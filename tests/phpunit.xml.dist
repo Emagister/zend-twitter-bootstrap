@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<phpunit stopOnError="true"
+         stopOnFailure="true"
+         colors="true"
+         bootstrap="bootstrap.php">
+
+    <testsuites>
+        <testsuite name="Twitter Bootstrap">
+            <directory>./Twitter</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>

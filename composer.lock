@@ -1,0 +1,22 @@
+{
+    "hash": "77e4f590657835bb86f3a68b1c9a2276",
+    "packages": [
+        {
+            "package": "zendframework/zendframework1",
+            "version": "1.12.0rc3"
+        }
+    ],
+    "packages-dev": [
+        {
+            "package": "mockery/mockery",
+            "version": "0.7.2"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": [
+
+    ]
+}

@@ -21,6 +21,12 @@ class Twitter_Bootstrap_Tables_TableTest extends PHPUnit_Framework_TestCase
 
     public function testCanAddRows()
     {
+        $row = m::mock('Twitter_Bootstrap_Tables_Table_Row');
+
+        $view = m::mock('Zend_View');
+        $view->shouldReceive('row')->once()->andReturn($row);
+
+        $this->object->setView($view);
         $table = $this->object->table();
         $row = $table->row();
         $table->add($row);
@@ -68,7 +74,7 @@ EOS;
 
         $this->object->setView($view);
 
-        $this->assertEquals($expected, "{$this->object}");
+        $this->assertEquals($expected, $this->object->__toString());
     }
 
     public function testRendersTableElementWithAttributes()
@@ -88,7 +94,7 @@ EOS;
         $this->object->isHover(true);
         $this->object->isCondensed(true);
 
-        $this->assertEquals($expected, "{$this->object}");
+        $this->assertEquals($expected, $this->object->__toString());
     }
 
     public function testRendersTableWithCaption()
@@ -131,7 +137,7 @@ EOS;
         $view->shouldReceive('escape')->with('table')->andReturn('table');
         $view->shouldReceive('cell')->andReturn($cell1, $cell2, $cell3);
 
-        $row = $this->object->row();
+        $row = new Twitter_Bootstrap_Tables_Table_Row();
         $row->setView($view);
         $row
             ->add('test')
@@ -145,9 +151,6 @@ EOS;
         $this->assertEquals($expected, $this->object->__toString());
     }
 
-    /**
-     * @group failing
-     */
     public function testRendersTableWithAllFeatures()
     {
         $expected = <<<EOS

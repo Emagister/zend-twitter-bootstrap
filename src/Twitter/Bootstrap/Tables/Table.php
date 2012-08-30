@@ -8,7 +8,7 @@ class Twitter_Bootstrap_Tables_Table
     /**
      * @var array
      */
-    protected $_rows;
+    protected $_rows = array();
 
     /**
      * Whether the table should be stripped or not
@@ -295,11 +295,13 @@ class Twitter_Bootstrap_Tables_Table
 
         $rowsAsString = '';
 
-        foreach ($this->_rows as $row) {
-            $rowsAsString .= $row;
-        }
+        if (sizeof($this->_rows)) {
+            foreach ($this->_rows as $row) {
+                $rowsAsString .= $row;
+            }
 
-        $content .= sprintf('<tbody>%s</tbody>', $rowsAsString);
+            $content .= sprintf('<tbody>%s</tbody>', $rowsAsString);
+        }
 
         return sprintf('<table%s>%s</table>', $this->_htmlAttribs($attributes), $content);
     }

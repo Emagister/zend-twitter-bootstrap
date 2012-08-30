@@ -22,9 +22,11 @@ echo $view->lead('Hi from Twitter\'s Bootstrap!');
 There are three view helpers to render images
 
 ```php
-<?php echo $this->roundedImage('/image.jpg', array('alt' => 'image alt attribute', 'class' => 'class')); ?>
-<?php echo $this->circledImage('/image.jpg', array('alt' => 'image alt attribute', 'class' => 'class')); ?>
-<?php echo $this->polaroidImage('/image.jpg', array('alt' => 'image alt attribute', 'class' => 'class')); ?>
+<?php
+
+echo $this->roundedImage('/image.jpg', array('alt' => 'image alt attribute', 'class' => 'class'));
+echo $this->circledImage('/image.jpg', array('alt' => 'image alt attribute', 'class' => 'class'));
+echo $this->polaroidImage('/image.jpg', array('alt' => 'image alt attribute', 'class' => 'class'));
 ```
 
 ### Tables ###

@@ -92,5 +92,5 @@ echo $table;
 
 ```php
 $isPreScollable = true;
-<?php echo $this->code('&lt;p&gt;Code example&lt;/p&gt;, $isPreScollable); ?>
+<?php echo $this->code('&lt;p&gt;Code example&lt;/p&gt;', $isPreScollable); ?>
 ```
